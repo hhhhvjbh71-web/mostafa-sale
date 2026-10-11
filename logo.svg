@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="malakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Icon Group -->
+  <g transform="translate(6, 6)">
+    <!-- Base Glow -->
+    <rect x="2" y="2" width="44" height="44" rx="12" fill="url(#malakGrad)" opacity="0.15" filter="url(#softGlow)"/>
+    <!-- Icon Container -->
+    <rect x="2" y="2" width="44" height="44" rx="12" fill="#0B132B" stroke="#0066FF" stroke-width="1.5"/>
+    
+    <!-- Laptop screen -->
+    <rect x="12" y="11" width="24" height="16" rx="2" fill="none" stroke="url(#malakGrad)" stroke-width="2"/>
+    <!-- Laptop screen content / glowing lightning/M -->
+    <path d="M17 19 L21 15 L23 18 L27 13" fill="none" stroke="#00D2FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Laptop base -->
+    <path d="M8 30 L40 30 C41 30 41.5 31 40.5 32 L36 34.5 C35.5 35 34.5 35 33.5 35 L14.5 35 C13.5 35 12.5 34.5 12 34.5 L7.5 32 C6.5 31 7 30 8 30 Z" fill="url(#malakGrad)"/>
+    <!-- Trackpad notch -->
+    <rect x="21" y="32" width="6" height="1.5" rx="0.75" fill="#0B132B"/>
+    <!-- Neon Dot -->
+    <circle cx="33" cy="14" r="1.5" fill="#00D2FF"/>
+  </g>
+
+  <!-- Brand Text -->
+  <g transform="translate(62, 16)">
+    <text x="0" y="22" font-family="'Plus Jakarta Sans', 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.5" fill="#FFFFFF">
+      MALAK<tspan fill="url(#malakGrad)">.</tspan>
+    </text>
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="2.5" fill="#00D2FF">
+      LAPTOP STORE
+    </text>
+  </g>
+</svg>

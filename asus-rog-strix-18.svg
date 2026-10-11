@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" width="500" height="360">
+  <defs>
+    <!-- Background Gradient for studio lighting -->
+    <radialGradient id="studioGlow_ROG_Strix_SCAR_18" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#18051a" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#070c18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="screenGrad_ROG_Strix_SCAR_18" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18051a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+    <linearGradient id="bodyBevel_ROG_Strix_SCAR_18" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="10%" stop-color="#14151a"/>
+      <stop offset="90%" stop-color="#14151a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="accentBeam_ROG_Strix_SCAR_18" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0055" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="shadow_ROG_Strix_SCAR_18" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Studio Ambient Ground Reflection & Glow -->
+  <rect width="500" height="360" rx="16" fill="#090f1d"/>
+  <circle cx="250" cy="180" r="180" fill="url(#studioGlow_ROG_Strix_SCAR_18)"/>
+  
+  <!-- Subtle Grid Pattern in background -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="0.75">
+    <line x1="50" y1="0" x2="50" y2="360" />
+    <line x1="150" y1="0" x2="150" y2="360" />
+    <line x1="250" y1="0" x2="250" y2="360" />
+    <line x1="350" y1="0" x2="350" y2="360" />
+    <line x1="450" y1="0" x2="450" y2="360" />
+    <line x1="0" y1="70" x2="500" y2="70" />
+    <line x1="0" y1="170" x2="500" y2="170" />
+    <line x1="0" y1="270" x2="500" y2="270" />
+  </g>
+
+  <!-- Badge / Brand overlay in top-left -->
+  <g transform="translate(24, 24)">
+    <rect x="0" y="0" width="84" height="22" rx="6" fill="#0f172a" stroke="#ff0055" stroke-width="1.2" opacity="0.9"/>
+    <text x="42" y="14.5" fill="#ff0055" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">ASUS</text>
+  </g>
+  
+  <!-- Tag overlay top-right -->
+  <g transform="translate(330, 24)">
+    <rect x="0" y="0" width="146" height="22" rx="6" fill="#1e293b" opacity="0.85"/>
+    <circle cx="12" cy="11" r="3.5" fill="#ff0055"/>
+    <text x="80" y="14.5" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" text-anchor="middle">RTX 4090 • 240Hz</text>
+  </g>
+
+  <!-- Main Laptop Group with Drop Shadow -->
+  <g filter="url(#shadow_ROG_Strix_SCAR_18)">
+    
+    <!-- 1. DISPLAY LID -->
+    <!-- Lid Outer Frame -->
+    <rect x="85" y="40" width="330" height="205" rx="10" fill="url(#bodyBevel_ROG_Strix_SCAR_18)" stroke="#475569" stroke-width="1.5"/>
+    <!-- Screen Bezel -->
+    <rect x="91" y="44" width="318" height="195" rx="6" fill="#050811" />
+    <!-- Screen Display Area -->
+    <rect x="96" y="48" width="308" height="186" rx="4" fill="url(#screenGrad_ROG_Strix_SCAR_18)" />
+    
+    <!-- Screen Artwork / Futuristic OS Visual -->
+    <circle cx="250" cy="130" r="46" fill="#ff0055" opacity="0.2"/>
+    <path d="M120 180 Q 200 90 280 150 T 400 110" fill="none" stroke="#ff0055" stroke-width="3" opacity="0.8"/>
+    <path d="M110 160 Q 220 190 320 120 T 400 150" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.6"/>
+    <!-- UI widgets on screen -->
+    <rect x="110" y="62" width="70" height="12" rx="3" fill="#ffffff" opacity="0.15"/>
+    <rect x="110" y="78" width="45" height="6" rx="2" fill="#ffffff" opacity="0.1"/>
+    <!-- Futuristic Circular ring -->
+    <circle cx="250" cy="130" r="28" fill="none" stroke="#ff0055" stroke-width="2" stroke-dasharray="8 4"/>
+    <circle cx="250" cy="130" r="8" fill="#ff0055"/>
+
+    <!-- Screen Notch (Apple) or WebCam Bar -->
+    
+    <circle cx="250" cy="46" r="1.5" fill="#38bdf8"/>
+
+    <!-- Bottom Display Hinge -->
+    <rect x="180" y="243" width="140" height="7" rx="3" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+
+    <!-- 2. KEYBOARD DECK / BASE (Isometric forward tilt perspective) -->
+    <!-- Base Lower Chassis -->
+    <path d="M40 280 L70 248 L430 248 L460 280 C462 283 460 288 454 288 L46 288 C40 288 38 283 40 280 Z" fill="url(#bodyBevel_ROG_Strix_SCAR_18)" stroke="#475569" stroke-width="1"/>
+    <!-- Base Lip Front & Chamfer -->
+    <path d="M46 288 L454 288 C458 288 460 291 458 293 L450 300 C448 302 445 303 440 303 L60 303 C55 303 52 302 50 300 L42 293 C40 291 42 288 46 288 Z" fill="#0b0e14" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Keyboard Well -->
+    <polygon points="90,252 410,252 422,274 78,274" fill="#0d0e12"/>
+    <!-- Keyboard Key Rows (Stylized glow lines) -->
+    <g stroke="#ff0055" stroke-width="1.2" opacity="0.75">
+      <line x1="96" y1="256" x2="404" y2="256"/>
+      <line x1="92" y1="261" x2="408" y2="261"/>
+      <line x1="87" y1="266" x2="413" y2="266"/>
+      <line x1="82" y1="271" x2="418" y2="271"/>
+    </g>
+    <!-- Key separates -->
+    <g stroke="#ffffff" stroke-width="0.8" opacity="0.2">
+      <line x1="140" y1="252" x2="136" y2="274"/>
+      <line x1="190" y1="252" x2="188" y2="274"/>
+      <line x1="240" y1="252" x2="240" y2="274"/>
+      <line x1="290" y1="252" x2="292" y2="274"/>
+      <line x1="340" y1="252" x2="344" y2="274"/>
+    </g>
+
+    <!-- Trackpad with border glow -->
+    <polygon points="205,278 295,278 298,296 202,296" fill="#141923" stroke="#334155" stroke-width="1"/>
+
+    <!-- Front RGB Glow Bar / Edge highlight -->
+    <line x1="80" y1="299" x2="420" y2="299" stroke="#ff0055" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+  </g>
+
+  <!-- Spec callout chip in bottom -->
+  <g transform="translate(160, 320)">
+    <rect x="0" y="0" width="180" height="24" rx="12" fill="#0b132b" stroke="#ff0055" stroke-width="1"/>
+    <text x="90" y="16" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5" text-anchor="middle">ROG Strix SCAR 18</text>
+  </g>
+</svg>

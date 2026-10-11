@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0B132B"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#favGrad)" stroke-width="2"/>
+  <!-- Laptop icon -->
+  <rect x="14" y="16" width="36" height="24" rx="3" fill="#1C2541" stroke="url(#favGrad)" stroke-width="2.5"/>
+  <path d="M22 28 L28 22 L32 26 L42 16" fill="none" stroke="#00D2FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M8 44 L56 44 C57.5 44 58 45.5 56.5 47 L51 51 C50 51.5 48.5 52 47 52 L17 52 C15.5 52 14 51.5 13 51 L7.5 47 C6 45.5 6.5 44 8 44 Z" fill="url(#favGrad)"/>
+  <rect x="27" y="46" width="10" height="2" rx="1" fill="#0B132B"/>
+</svg>

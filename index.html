@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر ملاك | أحدث وأقوى أجهزة اللابتوب ومحطات العمل الاحترافية</title>
+  <meta name="description" content="اكتشف أقوى أجهزة اللابتوب في متجر ملاك. أجهزة ألعاب خارقة، ألترا بوك فائقة النحافة، ومحطات عمل احترافية من آبل، آسوس، ديل، لينوفو، إتش بي وريزر مع ضمان رسمي شامل.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- خطوط عربية حديثة واحترافية: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- ملف التنسيقات الرئيسي -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- شريط الإعلانات العلوي -->
+  <div class="announcement-bar" id="announcementBar">
+    <div class="container announcement-content">
+      <div class="announcement-item">
+        <i class="fa-solid fa-truck-fast"></i>
+        <span>شحن سريع مجاني لجميع الطلبات التي تتجاوز <strong>1,000$</strong></span>
+      </div>
+      <div class="announcement-item promo-tag">
+        <i class="fa-solid fa-tag"></i>
+        <span>استخدم كود الخصم <mark>MALAK10</mark> للحصول على خصم 10%!</span>
+      </div>
+      <div class="announcement-links">
+        <span><i class="fa-solid fa-shield-halved"></i> ضمان رسمي لمدة سنتين</span>
+        <span><i class="fa-solid fa-phone"></i> +1 (800) 555-MALAK</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- الهيدر وشريط التنقل الرئيسي -->
+  <header class="header" id="mainHeader">
+    <div class="container navbar">
+      <!-- شعار المتجر -->
+      <a href="#home" class="logo" id="storeLogoLink" aria-label="الرئيسية - متجر ملاك">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">مَـلَاك<span class="dot">.</span></span>
+          <span class="logo-subtitle">متجر اللابتوب الاحترافي</span>
+        </div>
+      </a>
+
+      <!-- شريط البحث المباشر -->
+      <div class="header-search">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input 
+            type="text" 
+            id="globalSearchInput" 
+            placeholder="ابحث عن ماك بوك، RTX 4080، آبل، ديل، i9..." 
+            autocomplete="off"
+            aria-label="البحث في أجهزة اللابتوب"
+          >
+          <button type="button" id="clearSearchBtn" class="clear-search-btn" title="مسح البحث" style="display: none;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!-- صندوق نتائج البحث المباشر -->
+        <div class="search-autocomplete-box" id="searchAutocompleteBox"></div>
+      </div>
+
+      <!-- روابط القائمة الرئيسية -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> الرئيسية</a>
+        <a href="#catalog" class="nav-link"><i class="fa-solid fa-laptop"></i> الأجهزة</a>
+        <a href="#deals" class="nav-link"><i class="fa-solid fa-fire"></i> عروض حصرية</a>
+        <a href="#why-us" class="nav-link"><i class="fa-solid fa-gem"></i> لماذا نحن</a>
+        <a href="#reviews" class="nav-link"><i class="fa-solid fa-star"></i> التقييمات</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope"></i> تواصل معنا</a>
+      </nav>
+
+      <!-- أزرار الإجراءات في الهيدر -->
+      <div class="header-actions">
+        <!-- زر المفضلة -->
+        <button type="button" class="action-btn" id="wishlistTriggerBtn" title="قائمة الرغبات" aria-label="عرض قائمة الرغبات">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlistBadge">0</span>
+        </button>
+
+        <!-- زر سلة المشتريات -->
+        <button type="button" class="action-btn cart-btn" id="cartTriggerBtn" title="سلة التسوق" aria-label="فتح سلة التسوق">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge" id="cartBadge">0</span>
+          <span class="cart-btn-total" id="headerCartTotal">0$</span>
+        </button>
+
+        <!-- زر القائمة للأجهزة الذكية -->
+        <button type="button" class="mobile-toggle" id="mobileMenuBtn" aria-label="فتح القائمة">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- المحتوى الرئيسي للموقع -->
+  <main>
+    <!-- القسم الترحيبي (Hero Section) -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-indicator"></span>
+            <span>أحدث إصدارات 2026 متوفرة الآن حصرياً</span>
+          </div>
+          <h1 class="hero-title">
+            قوة لا تعرف الحدود. <br>
+            <span class="gradient-text">أداء استثنائي يلبي طموحك.</span>
+          </h1>
+          <p class="hero-description">
+            أهلاً بكم في <strong>متجر ملاك</strong> — وجهتكم الرائدة لأقوى وأحدث أجهزة اللابتوب العالمية. من وحوش الألعاب بكروت RTX 4090 الفائقة إلى أجهزة ماك بوك بمعالجات M3 Max ومحطات العمل المدعومة بالذكاء الاصطناعي، جميع أجهزتنا أصلية 100% مع ضمان رسمي معتمد.
+          </p>
+
+          <div class="hero-features-chips">
+            <div class="feature-chip"><i class="fa-solid fa-microchip"></i> معالجات Core Ultra و M3 Max</div>
+            <div class="feature-chip"><i class="fa-solid fa-shield-check"></i> أجهزة أصلية بضمان المصنع</div>
+            <div class="feature-chip"><i class="fa-solid fa-bolt"></i> شحن سريع ومؤمّن خلال 48 ساعة</div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#catalog" class="btn btn-primary" id="heroExploreBtn">
+              <i class="fa-solid fa-bag-shopping"></i> تصفح اللابتوبات
+            </a>
+            <a href="#deals" class="btn btn-outline" id="heroDealsBtn">
+              <i class="fa-solid fa-percent"></i> عروض اليوم الخاصة
+            </a>
+          </div>
+
+          <!-- إحصائيات المتجر -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+10,000</span>
+              <span class="stat-label">لابتوب تم بيعه</span>
+            </div>
+            <div class="stat-item-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">4.9 / 5</span>
+              <span class="stat-label">تقييم العملاء</span>
+            </div>
+            <div class="stat-item-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">ضمان الوكيل المعتمد</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- بطاقة العرض التفاعلية الرئيسية في الهيرو -->
+        <div class="hero-showcase">
+          <div class="showcase-card" id="heroShowcaseCard">
+            <div class="showcase-badge">الجهاز الرائد المميز</div>
+            <div class="showcase-img-container">
+              <img src="macbook-pro-16.svg" alt="آبل ماك بوك برو 16 بمعالج M3 Max" class="showcase-img" id="heroShowcaseImg">
+            </div>
+            <div class="showcase-info">
+              <div class="showcase-header">
+                <div>
+                  <span class="brand-tag">APPLE</span>
+                  <h3 class="showcase-title">ماك بوك برو 16" (M3 Max)</h3>
+                </div>
+                <div class="showcase-price-tag">
+                  <span class="price-old">3,499$</span>
+                  <span class="price-current">3,199$</span>
+                </div>
+              </div>
+              <div class="showcase-specs">
+                <span><i class="fa-solid fa-microchip"></i> معالج M3 Max بـ 16 نواة</span>
+                <span><i class="fa-solid fa-memory"></i> رام 36 جيجابايت موحدة</span>
+                <span><i class="fa-solid fa-hard-drive"></i> سعة 1 تيرابايت SSD</span>
+                <span><i class="fa-solid fa-desktop"></i> شاشة ريتنا XDR سائلة</span>
+              </div>
+              <div class="showcase-actions">
+                <button type="button" class="btn btn-primary btn-block" onclick="cartManager.quickAddToCart('macbook-pro-16')">
+                  <i class="fa-solid fa-cart-plus"></i> إضافة فورية للسلة
+                </button>
+                <button type="button" class="btn btn-icon-only" onclick="modalManager.openQuickView('macbook-pro-16')" title="تفاصيل سريعة">
+                  <i class="fa-solid fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- وهج إضاءة الخلفية -->
+          <div class="ambient-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- شريط مزايا متجر ملاك -->
+    <section class="perks-section" id="why-us">
+      <div class="container perks-grid">
+        <div class="perk-card">
+          <div class="perk-icon-box"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="perk-text">
+            <h4>شحن سريع ومجاني</h4>
+            <p>توصيل آمن ومؤمّن لباب منزلك مع تتبع مباشر لخط سير الشحنة.</p>
+          </div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon-box"><i class="fa-solid fa-certificate"></i></div>
+          <div class="perk-text">
+            <h4>ضمان رسمي لمدة عامين</h4>
+            <p>ضمان مباشر من الشركة المصنعة مع رعاية تقنية خاصة من متجر ملاك.</p>
+          </div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon-box"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+          <div class="perk-text">
+            <h4>إرجاع واستبدال خلال 30 يوماً</h4>
+            <p>ضمان الرضا التام أو استبدال الجهاز واسترداد المبلغ بكل سهولة.</p>
+          </div>
+        </div>
+        <div class="perk-card">
+          <div class="perk-icon-box"><i class="fa-solid fa-headset"></i></div>
+          <div class="perk-text">
+            <h4>دعم فني واستشارات 24/7</h4>
+            <p>مهندسون وخبراء عتاد متخصصون لمساعدتك في اختيار أنسب مواصفات.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم كتالوج أجهزة اللابتوب والتصفية -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        <!-- ترويسة القسم -->
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-subtitle">استكشف الأجهزة</span>
+            <h2 class="section-title">كتالوج أجهزة اللابتوب ومحطات العمل</h2>
+            <p class="section-desc">حدد الماركة، الفئة، نوع المعالج، أو ميزانيتك للوصول إلى جهاز أحلامك بدقة.</p>
+          </div>
+          <!-- خيارات العرض وعدد النتائج -->
+          <div class="catalog-toolbar-actions">
+            <span class="results-count" id="catalogResultCount">يتم عرض 12 جهاز لابتوب</span>
+            <div class="view-toggle" role="group" aria-label="طريقة العرض">
+              <button type="button" class="view-btn active" id="gridViewBtn" title="عرض شبكي">
+                <i class="fa-solid fa-table-cells-large"></i>
+              </button>
+              <button type="button" class="view-btn" id="listViewBtn" title="عرض قائمة">
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- أدوات الفلترة والتصفية -->
+        <div class="catalog-controls">
+          <!-- أزرار الفئات الرئيسية -->
+          <div class="category-pills" id="categoryPills">
+            <button type="button" class="cat-pill active" data-category="all">
+              <i class="fa-solid fa-layer-group"></i> جميع الأجهزة
+            </button>
+            <button type="button" class="cat-pill" data-category="gaming">
+              <i class="fa-solid fa-gamepad"></i> لابتوبات الألعاب
+            </button>
+            <button type="button" class="cat-pill" data-category="ultrabook">
+              <i class="fa-solid fa-feather-pointed"></i> ألترا بوك خفيفة
+            </button>
+            <button type="button" class="cat-pill" data-category="creator">
+              <i class="fa-solid fa-palette"></i> صناع المحتوى و OLED
+            </button>
+            <button type="button" class="cat-pill" data-category="business">
+              <i class="fa-solid fa-briefcase"></i> الأعمال والمحترفين
+            </button>
+          </div>
+
+          <!-- شريط الفلاتر الثانوي (الماركة، السعر، الترتيب) -->
+          <div class="filters-bar">
+            <!-- فلتر الماركة -->
+            <div class="filter-group brand-filter-group">
+              <label class="filter-label"><i class="fa-solid fa-tag"></i> الماركة:</label>
+              <div class="brand-buttons" id="brandFilterContainer">
+                <button type="button" class="brand-btn active" data-brand="all">الكل</button>
+                <button type="button" class="brand-btn" data-brand="Apple">آبل (Apple)</button>
+                <button type="button" class="brand-btn" data-brand="ASUS">آسوس (ASUS)</button>
+                <button type="button" class="brand-btn" data-brand="Dell">ديل (Dell)</button>
+                <button type="button" class="brand-btn" data-brand="Lenovo">لينوفو (Lenovo)</button>
+                <button type="button" class="brand-btn" data-brand="HP">إتش بي (HP)</button>
+                <button type="button" class="brand-btn" data-brand="Razer">ريزر (Razer)</button>
+                <button type="button" class="brand-btn" data-brand="MSI">إم إس آي (MSI)</button>
+                <button type="button" class="brand-btn" data-brand="Alienware">إلين وير (Alienware)</button>
+                <button type="button" class="brand-btn" data-brand="Acer">إيسر (Acer)</button>
+              </div>
+            </div>
+
+            <!-- التحكم بالسعر والترتيب -->
+            <div class="filter-group-right">
+              <!-- شريط نطاق السعر -->
+              <div class="price-slider-box">
+                <div class="price-slider-header">
+                  <label for="priceRangeInput" class="filter-label"><i class="fa-solid fa-dollar-sign"></i> الحد الأقصى للسعر:</label>
+                  <span class="price-range-val" id="priceDisplay">4,500$</span>
+                </div>
+                <input 
+                  type="range" 
+                  id="priceRangeInput" 
+                  min="900" 
+                  max="4500" 
+                  step="50" 
+                  value="4500"
+                  class="custom-range"
+                >
+              </div>
+
+              <!-- القائمة المنسدلة للترتيب -->
+              <div class="sort-box">
+                <label for="sortSelect" class="filter-label"><i class="fa-solid fa-arrow-down-wide-short"></i> الترتيب حسب:</label>
+                <div class="select-wrapper">
+                  <select id="sortSelect" class="custom-select">
+                    <option value="featured">الأجهزة المميزة وأفضل العروض</option>
+                    <option value="price-asc">السعر: من الأقل إلى الأعلى</option>
+                    <option value="price-desc">السعر: من الأعلى إلى الأقل</option>
+                    <option value="rating">الأعلى تقييماً</option>
+                    <option value="name">اسم الجهاز أبجدياً</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- زر إعادة ضبط الفلاتر -->
+              <button type="button" class="btn btn-ghost btn-reset" id="resetFiltersBtn" title="إعادة تعيين الفلاتر">
+                <i class="fa-solid fa-arrow-rotate-left"></i> إعادة ضبط
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- شبكة المنتجات (يتم تعبئتها ديناميكياً عبر الجافاسكريبت) -->
+        <div class="products-grid" id="productsGrid">
+          <!-- بطاقات اللابتوب تُضاف برمجياً هنا -->
+        </div>
+
+        <!-- حالة عدم وجود نتائج -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+          <div class="empty-state-icon"><i class="fa-solid fa-laptop-slash"></i></div>
+          <h3>لم نتمكن من العثور على أجهزة مطابقة</h3>
+          <p>جرّب تعديل معايير البحث أو تغيير نطاق السعر والفئات المختارة.</p>
+          <button type="button" class="btn btn-primary" onclick="filterManager.resetFilters()">
+            <i class="fa-solid fa-arrows-rotate"></i> إعادة ضبط كل الفلاتر
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- عرض اليوم الخاطف (Spotlight Flash Deal) -->
+    <section class="deal-banner-section" id="deals">
+      <div class="container">
+        <div class="deal-banner-card">
+          <div class="deal-info">
+            <div class="deal-badge"><i class="fa-solid fa-bolt"></i> عرض خاص ومحدود لفترة وجيزة</div>
+            <h2 class="deal-title">آسوس روج ستريكس سكار 18 (ROG SCAR 18)</h2>
+            <p class="deal-subtitle">
+              معالج Intel Core i9-14900HX • كارت شاشة RTX 4090 بسعة 16 جيجابايت • رام 64 جيجابايت DDR5 • سعة تخزين 2 تيرابايت PCIe 4.0 SSD • شاشة Mini-LED بتردد 240 هرتز فائقة الوضوح.
+            </p>
+            <div class="deal-pricing">
+              <span class="deal-price-current">3,899$</span>
+              <span class="deal-price-old">4,299$</span>
+              <span class="deal-savings">وفّر 400$ اليوم</span>
+            </div>
+
+            <!-- العد التنازلي التفاعلي -->
+            <div class="deal-countdown" id="dealCountdown">
+              <div class="countdown-unit">
+                <span class="count-num" id="countHours">14</span>
+                <span class="count-label">ساعة</span>
+              </div>
+              <span class="count-divider">:</span>
+              <div class="countdown-unit">
+                <span class="count-num" id="countMinutes">42</span>
+                <span class="count-label">دقيقة</span>
+              </div>
+              <span class="count-divider">:</span>
+              <div class="countdown-unit">
+                <span class="count-num" id="countSeconds">19</span>
+                <span class="count-label">ثانية</span>
+              </div>
+            </div>
+
+            <div class="deal-actions">
+              <button type="button" class="btn btn-primary btn-lg" onclick="cartManager.quickAddToCart('asus-rog-strix-18')">
+                <i class="fa-solid fa-cart-shopping"></i> اغتنم العرض الآن
+              </button>
+              <button type="button" class="btn btn-outline btn-lg" onclick="modalManager.openQuickView('asus-rog-strix-18')">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> عرض كامل المواصفات
+              </button>
+            </div>
+          </div>
+          <div class="deal-visual">
+            <img src="asus-rog-strix-18.svg" alt="ASUS ROG Strix SCAR 18" class="deal-img">
+            <div class="glow-orb"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- آراء وتقييمات العملاء الموثقة -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">تجارب حقيقية</span>
+          <h2 class="section-title">ماذا يقول عملاؤنا عن متجر ملاك؟</h2>
+          <p class="section-desc">يثق بنا آلاف المطورين، محترفي الألعاب، وصناع الأفلام في الشرق الأوسط والعالم.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-body">
+              "اشتريت جهاز ماك بوك برو 16 بمعالج M3 Max. وصلني بتغليف المصنع الأصلي خلال 48 ساعة فقط، وتم تفعيل ضمان آبل الرسمي مباشرة على موقع الشركة. تجربة شراء فاخرة واحترافية للغاية!"
+            </p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">كـح</div>
+              <div>
+                <h4 class="reviewer-name">كريم الحسيني</h4>
+                <span class="reviewer-status"><i class="fa-solid fa-circle-check"></i> مشترٍ موثق • مهندس برمجيات ونظم</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-body">
+              "لابتوب ASUS ROG Strix SCAR 18 وحش أداء بكل ما تعنيه الكلمة! ألعاب مثل Cyberpunk 2077 تعمل بأكثر من 140 إطار على أعلى إعدادات والتبريد ممتاز. خدمة عملاء متجر ملاك متميزة وساعدوني في التجهيز."
+            </p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar avatar-blue">مر</div>
+              <div>
+                <h4 class="reviewer-name">محمد رضوان</h4>
+                <span class="reviewer-status"><i class="fa-solid fa-circle-check"></i> مشترٍ موثق • مطور ألعاب إلكترونية</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-body">
+              "شاشة Dell XPS 16 بدقة 4K OLED خرافية من حيث دقة الألوان وتدرجات الأسود في مونتاج الفيديو وتصحيح الألوان. كود الخصم وفّر لي أكثر من 250$. متجر ملاك هو خياري الأول دائماً."
+            </p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar avatar-purple">سل</div>
+              <div>
+                <h4 class="reviewer-name">سارة الخطيب</h4>
+                <span class="reviewer-status"><i class="fa-solid fa-circle-check"></i> مشترٍ موثق • مخرجة وصانعة محتوى</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الأسئلة الشائعة (Accordion FAQ) -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">هل لديك استفسار؟</span>
+          <h2 class="section-title">الأسئلة الأكثر شيوعاً</h2>
+          <p class="section-desc">إجابات واضحة عن سياسات الضمان، الشحن، والاستبدال في متجر ملاك.</p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span>هل جميع أجهزة اللابتوب جديدة ومغلفة مع ضمان المصنع الرسمي؟</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>نعم، بنسبة 100%. جميع الأجهزة المعروضة في متجر ملاك جديدة تماماً، مغلفة بتغليف المصنع الأصلي مع الرقم التسلسلي، وتأتي بضمان الوكيل الرسمي المعتمد (مثل AppleCare، Dell ProSupport، ASUS Global Warranty) بالإضافة لضمان متجر ملاك لمدة سنتين كاملتين.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span>ما هي مدة التوصيل وكيف يمكنني تتبع طلبي؟</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>يتم تجهيز وشحن الطلبات خلال 24 ساعة من تأكيد الشراء. الشحن القياسي يستغرق من يومين إلى 4 أيام عمل، والشحن السريع الفائق يستغرق من يوم إلى يومين فقط. ستحصل على رابط مباشر لتتبع حركة الطرد لحظة بلحظة عبر البريد الإلكتروني والرسائل النصية.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span>ما هي سياسة الإرجاع والاستبدال المتبعة؟</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>نوفر ضمان استرجاع أو استبدال لمدة 30 يوماً. إذا رغبت في استبدال الموديل أو لم يكن الجهاز يلبي تطلعاتك تماماً، يتولى فريقنا استلام الجهاز واسترداد كامل المبلغ المدفوع بدون أي تعقيدات.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-header" aria-expanded="false">
+              <span>ما هي طرق الدفع المتوفرة والمقبولة لديكم؟</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-content">
+              <p>نقبل جميع البطاقات الائتمانية والخصم المباشر (فيزا، ماستركارد، مدى)، آبل باي (Apple Pay)، باي بال (PayPal)، بالإضافة إلى خيار الدفع نقداً عند الاستلام للمناطق المتاحة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم التواصل ومعلومات المعرض -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="section-subtitle">تواصل معنا</span>
+          <h2 class="section-title">تفضل بزيارتنا أو استشر مستشارينا التقنيين</h2>
+          <p>
+            هل تحتاج لمساعدة في تحديد أفضل معالج أو بطاقة رسوميات لتطبيقات الذكاء الاصطناعي، التصميم المعماري، أو البث المباشر؟ فريقنا الهندسي جاهز لمساعدتك مجاناً.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>صالة عرض متجر ملاك الرئيسية:</strong>
+                <p>شارع التكنولوجيا والابتكار، برج المستقبل الرقمي، جناح 400</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>الهاتف وخدمة واتساب المباشرة:</strong>
+                <p>+1 (800) 555-MALAK / +1 (800) 555-6252</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>البريد الإلكتروني الرسمي:</strong>
+                <p>support@malakstore.com / sales@malakstore.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <strong>ساعات العمل:</strong>
+                <p>السبت - الخميس: 9:00 صباحاً – 10:00 مساءً | الجمعة: 2:00 ظهراً – 11:00 مساءً</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="يوتيوب"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="لينكد إن"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" aria-label="ديسكورد"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+
+        <!-- نموذج التواصل السريع -->
+        <div class="contact-form-card">
+          <h3>أرسل لنا استفسارك</h3>
+          <p>نقوم بالرد على جميع الرسائل خلال أقل من 15 دقيقة خلال أوقات العمل.</p>
+
+          <form id="contactForm" onsubmit="event.preventDefault(); handleContactSubmit();">
+            <div class="form-group">
+              <label for="contactName">الاسم الكامل *</label>
+              <input type="text" id="contactName" required placeholder="أحمد المنصور">
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">البريد الإلكتروني *</label>
+              <input type="email" id="contactEmail" required placeholder="ahmed@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">الموضوع أو الجهاز المطلوب</label>
+              <input type="text" id="contactSubject" placeholder="مثال: استفسار حول مواصفات ماك بوك برو">
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">رسالتك بالتفصيل *</label>
+              <textarea id="contactMessage" rows="4" required placeholder="اكتب استفسارك أو المواصفات التي تبحث عنها هنا..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة الآن
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- درج سلة المشتريات الجانبي المنزلق (Cart Drawer) -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer-panel">
+      <!-- ترويسة السلة -->
+      <div class="cart-drawer-header">
+        <div class="cart-header-title">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>سلة المشتريات</h3>
+          <span class="cart-items-counter" id="cartDrawerCount">0 عناصر</span>
+        </div>
+        <button type="button" class="close-btn" id="closeCartBtn" aria-label="إغلاق السلة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- مؤشر الشحن المجاني -->
+      <div class="shipping-progress-box">
+        <div class="shipping-progress-text" id="shippingProgressText">
+          أضف منتجات بقيمة <strong>1,000$</strong> للحصول على <strong>شحن مجاني سريع</strong>!
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="shippingProgressBar" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- قائمة عناصر السلة -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- تُضاف العناصر برمجياً هنا -->
+      </div>
+
+      <!-- ملخص وخاتمة السلة -->
+      <div class="cart-drawer-footer" id="cartFooter">
+        <!-- إدخال كود الخصم -->
+        <div class="coupon-box">
+          <div class="coupon-input-wrap">
+            <input type="text" id="couponInput" placeholder="كود الخصم (مثال: MALAK10)">
+            <button type="button" class="btn btn-outline btn-sm" id="applyCouponBtn">تطبيق الكود</button>
+          </div>
+          <div class="coupon-applied-tag" id="couponAppliedTag" style="display: none;">
+            <span><i class="fa-solid fa-check"></i> تم تطبيق الكود (<strong id="couponPercentDisplay">خصم 10%</strong>)</span>
+            <button type="button" class="remove-coupon-btn" id="removeCouponBtn" title="إلغاء الخصم">×</button>
+          </div>
+        </div>
+
+        <!-- تفاصيل الحساب والإجمالي -->
+        <div class="cart-breakdown">
+          <div class="breakdown-row">
+            <span>المجموع الفرعي:</span>
+            <span id="cartSubtotal">0.00$</span>
+          </div>
+          <div class="breakdown-row discount-row" id="cartDiscountRow" style="display: none;">
+            <span>قيمة الخصم:</span>
+            <span id="cartDiscount">-0.00$</span>
+          </div>
+          <div class="breakdown-row">
+            <span>رسوم الشحن والتوصيل:</span>
+            <span id="cartShipping">مجاناً</span>
+          </div>
+          <div class="breakdown-row">
+            <span>ضريبة القيمة المضافة التقديرية (5%):</span>
+            <span id="cartTax">0.00$</span>
+          </div>
+          <div class="breakdown-divider"></div>
+          <div class="breakdown-row total-row">
+            <span>المبلغ الإجمالي:</span>
+            <span id="cartGrandTotal">0.00$</span>
+          </div>
+        </div>
+
+        <!-- أزرار إتمام الطلب -->
+        <div class="cart-cta-group">
+          <button type="button" class="btn btn-primary btn-block btn-lg" id="proceedCheckoutBtn">
+            <i class="fa-solid fa-lock"></i> الانتقال لإتمام الطلب والدفع
+          </button>
+          <button type="button" class="btn btn-ghost btn-block btn-sm" id="clearCartBtn">
+            <i class="fa-solid fa-trash-can"></i> تفريغ سلة المشتريات
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- نافذة إتمام الطلب والدفع (Checkout Modal) -->
+  <div class="modal checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="modal-overlay" id="checkoutOverlay"></div>
+    <div class="modal-dialog checkout-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-shield-halved text-primary"></i>
+          <h3>إتمام الشراء الآمن • متجر ملاك</h3>
+        </div>
+        <button type="button" class="close-btn" id="closeCheckoutBtn" aria-label="إغلاق النافذة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body checkout-body">
+        <form id="checkoutForm" onsubmit="event.preventDefault(); checkoutManager.handlePlaceOrder();">
+          <div class="checkout-grid">
+            <!-- يمين: بيانات العميل والشحن والدفع -->
+            <div class="checkout-forms">
+              <!-- الخطوة 1: بيانات الاتصال -->
+              <div class="checkout-section">
+                <h4 class="checkout-section-title"><i class="fa-solid fa-user"></i> 1. بيانات الاتصال</h4>
+                <div class="form-row">
+                  <div class="form-group flex-1">
+                    <label for="orderName">الاسم الكامل *</label>
+                    <input type="text" id="orderName" required placeholder="طارق عبد الله">
+                  </div>
+                  <div class="form-group flex-1">
+                    <label for="orderEmail">البريد الإلكتروني *</label>
+                    <input type="email" id="orderEmail" required placeholder="tariq@example.com">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="orderPhone">رقم الهاتف الجوال *</label>
+                  <input type="tel" id="orderPhone" required placeholder="+966 50 123 4567">
+                </div>
+              </div>
+
+              <!-- الخطوة 2: عنوان الشحن والتوصيل -->
+              <div class="checkout-section">
+                <h4 class="checkout-section-title"><i class="fa-solid fa-location-dot"></i> 2. عنوان التوصيل</h4>
+                <div class="form-group">
+                  <label for="orderAddress">العنوان التفصيلي (الشارع والحي ورقم البناية) *</label>
+                  <input type="text" id="orderAddress" required placeholder="شارع الملك فهد، حي المروج، فيلا 24">
+                </div>
+                <div class="form-row">
+                  <div class="form-group flex-1">
+                    <label for="orderCity">المدينة *</label>
+                    <input type="text" id="orderCity" required placeholder="الرياض / دبي / القاهرة">
+                  </div>
+                  <div class="form-group flex-1">
+                    <label for="orderZip">الرمز البريدي *</label>
+                    <input type="text" id="orderZip" required placeholder="12345">
+                  </div>
+                </div>
+              </div>
+
+              <!-- الخطوة 3: سرعة الشحن -->
+              <div class="checkout-section">
+                <h4 class="checkout-section-title"><i class="fa-solid fa-truck"></i> 3. طريقة وسرعة الشحن</h4>
+                <div class="shipping-options">
+                  <label class="shipping-option-card">
+                    <input type="radio" name="shippingSpeed" value="standard" checked onchange="checkoutManager.updateShippingOption(0)">
+                    <div class="shipping-opt-content">
+                      <span class="shipping-opt-name">شحن قياسي مؤمّن (خلال 2 - 3 أيام عمل)</span>
+                      <span class="shipping-opt-price text-accent">مجاناً</span>
+                    </div>
+                  </label>
+                  <label class="shipping-option-card">
+                    <input type="radio" name="shippingSpeed" value="express" onchange="checkoutManager.updateShippingOption(25)">
+                    <div class="shipping-opt-content">
+                      <span class="shipping-opt-name">شحن فائق السرعة VIP (توصيل في اليوم التالي قبل الظهر)</span>
+                      <span class="shipping-opt-price">25.00$</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- الخطوة 4: طريقة الدفع -->
+              <div class="checkout-section">
+                <h4 class="checkout-section-title"><i class="fa-solid fa-credit-card"></i> 4. طريقة الدفع</h4>
+                <div class="payment-tabs">
+                  <label class="payment-tab active" data-pay="card">
+                    <input type="radio" name="paymentMethod" value="card" checked>
+                    <span><i class="fa-regular fa-credit-card"></i> بطاقة مدى / ائتمان</span>
+                  </label>
+                  <label class="payment-tab" data-pay="paypal">
+                    <input type="radio" name="paymentMethod" value="paypal">
+                    <span><i class="fa-brands fa-paypal"></i> باي بال (PayPal)</span>
+                  </label>
+                  <label class="payment-tab" data-pay="cod">
+                    <input type="radio" name="paymentMethod" value="cod">
+                    <span><i class="fa-solid fa-money-bill-wave"></i> الدفع عند الاستلام</span>
+                  </label>
+                </div>
+
+                <!-- بيانات البطاقة البنكية -->
+                <div class="card-details-box" id="cardDetailsBox">
+                  <div class="form-group">
+                    <label for="cardNumber">رقم البطاقة</label>
+                    <div class="input-icon-wrap">
+                      <input type="text" id="cardNumber" placeholder="4242 •••• •••• 4242" maxlength="19" value="4242 •••• •••• 4242">
+                      <i class="fa-brands fa-cc-visa"></i>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group flex-1">
+                      <label for="cardExpiry">تاريخ الانتهاء</label>
+                      <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" value="12/28">
+                    </div>
+                    <div class="form-group flex-1">
+                      <label for="cardCvc">رمز الأمان (CVV)</label>
+                      <input type="text" id="cardCvc" placeholder="•••" maxlength="4" value="842">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- يسار: ملخص الطلب وقائمة المشتريات -->
+            <div class="checkout-summary-col">
+              <div class="checkout-summary-card">
+                <h4>ملخص المشتريات</h4>
+                <div class="checkout-items-preview" id="checkoutItemsPreview">
+                  <!-- قائمة عناصر الفاتورة -->
+                </div>
+
+                <div class="checkout-totals">
+                  <div class="c-row">
+                    <span>مجموع المنتجات:</span>
+                    <span id="checkoutSubtotal">0.00$</span>
+                  </div>
+                  <div class="c-row text-success" id="checkoutDiscountRow" style="display: none;">
+                    <span>الخصم الترويجي:</span>
+                    <span id="checkoutDiscount">-0.00$</span>
+                  </div>
+                  <div class="c-row">
+                    <span>رسوم الشحن:</span>
+                    <span id="checkoutShipping">مجاناً</span>
+                  </div>
+                  <div class="c-row">
+                    <span>ضريبة القيمة المضافة (5%):</span>
+                    <span id="checkoutTax">0.00$</span>
+                  </div>
+                  <div class="c-row-divider"></div>
+                  <div class="c-row total-highlight">
+                    <span>المبلغ الإجمالي النهائي:</span>
+                    <span id="checkoutGrandTotal">0.00$</span>
+                  </div>
+                </div>
+
+                <div class="security-guarantee">
+                  <i class="fa-solid fa-lock text-success"></i>
+                  <span>معاملة مشفرة بنسبة 100% بأحدث معايير الأمان 256-Bit SSL</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="placeOrderSubmitBtn">
+                  <i class="fa-solid fa-shield-check"></i> تأكيد الطلب والدفع الآن
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة نجاح الطلب وإصدار الفاتورة (Order Success Modal) -->
+  <div class="modal order-success-modal" id="orderSuccessModal" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-dialog order-dialog">
+      <div class="order-success-content text-center">
+        <div class="success-icon-wrap">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <span class="order-badge">تم تأكيد الطلب بنجاح تام</span>
+        <h2 class="order-title">شكراً لثقتكم بمتجر ملاك!</h2>
+        <p class="order-subtitle">تم استلام طلبكم بنجاح، ويقوم فريقنا الفني حالياً بتجهيز جهاز اللابتوب للشحن الفوري.</p>
+
+        <!-- بطاقة الفاتورة الرقمية -->
+        <div class="order-receipt-card" id="orderReceiptCard">
+          <div class="receipt-header">
+            <div>
+              <span class="r-label">رقم الطلب</span>
+              <strong class="r-id" id="receiptOrderId">#MLK-849201</strong>
+            </div>
+            <div>
+              <span class="r-label">تاريخ الطلب</span>
+              <strong id="receiptDate">12 أكتوبر 2026</strong>
+            </div>
+          </div>
+          <div class="receipt-divider"></div>
+          <div class="receipt-customer">
+            <p><strong>اسم العميل:</strong> <span id="receiptCustomerName">طارق عبد الله</span></p>
+            <p><strong>عنوان التوصيل:</strong> <span id="receiptShippingAddress">شارع الملك فهد</span></p>
+            <p><strong>حالة الدفع:</strong> <span class="badge-success">تم السداد بنجاح</span></p>
+          </div>
+          <div class="receipt-divider"></div>
+          <div class="receipt-items-list" id="receiptItemsList"></div>
+          <div class="receipt-divider"></div>
+          <div class="receipt-total-row">
+            <span>إجمالي المبلغ المدفوع:</span>
+            <strong class="text-accent" id="receiptTotalAmount">0.00$</strong>
+          </div>
+        </div>
+
+        <div class="order-actions">
+          <button type="button" class="btn btn-primary" onclick="modalManager.closeOrderSuccess();">
+            <i class="fa-solid fa-laptop"></i> مواصلة التسوق
+          </button>
+          <button type="button" class="btn btn-outline" onclick="window.print();">
+            <i class="fa-solid fa-print"></i> طباعة الفاتورة
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة المعاينة السريعة والمواصفات الكاملة (Quick View Modal) -->
+  <div class="modal quick-view-modal" id="quickViewModal" aria-hidden="true">
+    <div class="modal-overlay" id="quickViewOverlay"></div>
+    <div class="modal-dialog qv-dialog">
+      <button type="button" class="close-btn" id="closeQuickViewBtn" aria-label="إغلاق النافذة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="qv-body" id="quickViewContent">
+        <!-- يتم عرض المواصفات التفصيلية للجهاز عبر الجافاسكريبت -->
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة قائمة الرغبات / المفضلة (Wishlist Modal) -->
+  <div class="modal wishlist-modal" id="wishlistModal" aria-hidden="true">
+    <div class="modal-overlay" id="wishlistOverlay"></div>
+    <div class="modal-dialog wishlist-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-heart text-danger"></i>
+          <h3>الأجهزة المحفوظة في المفضلة</h3>
+          <span class="cart-items-counter" id="wishlistModalCounter">0 أجهزة</span>
+        </div>
+        <button type="button" class="close-btn" id="closeWishlistBtn" aria-label="إغلاق المفضلة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="wishlist-items-container" id="wishlistItemsContainer">
+          <!-- تُعرض الأجهزة المفضلة ديناميكياً هنا -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- حاوية إشعارات التنبيه السريعة (Toasts) -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- التذييل الاحترافي (Footer) -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- العمود 1: معلومات المتجر -->
+      <div class="footer-col brand-col">
+        <div class="logo">
+          <div class="logo-icon-wrap">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">مَـلَاك<span class="dot">.</span></span>
+            <span class="logo-subtitle">متجر اللابتوب الاحترافي</span>
+          </div>
+        </div>
+        <p class="footer-about">
+          متجر ملاك هو الوجهة المتخصصة الأولى لأجهزة اللابتوب الاحترافية، أجهزة الألعاب الفائقة، ومحطات العمل المحمولة لصناع المحتوى والمهندسين. صُمم بواسطة خبراء التقنية لمحبي التميز.
+        </p>
+        <div class="footer-trust-badges">
+          <span><i class="fa-solid fa-certificate"></i> وكيل معتمد</span>
+          <span><i class="fa-solid fa-shield"></i> أجهزة أصلية 100%</span>
+        </div>
+      </div>
+
+      <!-- العمود 2: روابط الوصول السريع -->
+      <div class="footer-col">
+        <h4 class="footer-heading">روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#home">الصفحة الرئيسية</a></li>
+          <li><a href="#catalog">كتالوج الأجهزة بالكامل</a></li>
+          <li><a href="#deals">العروض والخصومات الخاصة</a></li>
+          <li><a href="#why-us">لماذا متجر ملاك؟</a></li>
+          <li><a href="#reviews">آراء وتقييمات العملاء</a></li>
+          <li><a href="#contact">التواصل مع صالة العرض</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود 3: فئات اللابتوب -->
+      <div class="footer-col">
+        <h4 class="footer-heading">أقسام الأجهزة</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog" onclick="filterManager.selectCategory('gaming')">أجهزة الألعاب عالية الأداء</a></li>
+          <li><a href="#catalog" onclick="filterManager.selectCategory('ultrabook')">ألترا بوك خفيفة لرجال الأعمال</a></li>
+          <li><a href="#catalog" onclick="filterManager.selectCategory('creator')">شاشات OLED فائقة الدقة للمصممين</a></li>
+          <li><a href="#catalog" onclick="filterManager.selectCategory('business')">أجهزة الشركات والبرمجة</a></li>
+          <li><a href="#catalog" onclick="filterManager.selectBrand('Apple')">أجهزة آبل ماك بوك الأصلية</a></li>
+        </ul>
+      </div>
+
+      <!-- العمود 4: النشرة البريدية ووسائل الدفع -->
+      <div class="footer-col">
+        <h4 class="footer-heading">نادي ملاك VIP التقني</h4>
+        <p class="footer-text">اشترك معنا لتصلك إشعارات إطلاق أحدث أجيال كروت الشاشة والمعالجات وكوبونات الخصم الحصرية.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); handleNewsletterSubmit();">
+          <input type="email" id="newsletterEmail" placeholder="أدخل بريدك الإلكتروني" required>
+          <button type="submit" class="btn btn-primary" title="اشتراك"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+
+        <div class="payment-icons">
+          <span><i class="fa-brands fa-cc-visa" title="فيزا"></i></span>
+          <span><i class="fa-brands fa-cc-mastercard" title="ماستركارد"></i></span>
+          <span><i class="fa-brands fa-cc-apple-pay" title="آبل باي"></i></span>
+          <span><i class="fa-brands fa-paypal" title="باي بال"></i></span>
+          <span><i class="fa-solid fa-money-bill-wave" title="الدفع عند الاستلام"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- الشريط السفلي للحقوق -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 متجر ملاك (Malak Store). جميع الحقوق محفوظة. صُمم لأقصى مستويات الأداء والسرعة.</p>
+        <div class="footer-bottom-links">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">الشروط والأحكام</a>
+          <a href="#">تفاصيل الضمان الرسمي</a>
+          <a href="#">خريطة الموقع</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ملف المنطق البرمجي الرئيسي -->
+  <script src="app.js"></script>
+</body>
+</html>
